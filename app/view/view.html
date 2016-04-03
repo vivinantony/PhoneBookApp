@@ -1,0 +1,43 @@
+<div class="well">
+    <h1>{{title}}</h1>
+
+    <table class="table table-bordered">
+        <tr>
+            <td>First Name:</td>
+            <td>{{contact.fname}}</td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>{{contact.lname}}</td>
+        </tr>
+    </table>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+                <a class="btn btn-default" href="/list"><i class="fa fa-angle-left"></i> Back</a>
+                <button class="btn btn-primary" ng-click="edit()"><i class="fa fa-pencil"></i> Edit</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i> Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="deleteModalLabel">Delete Confirmation</h4>
+            </div>
+            <div class="modal-body">
+                Are you sure?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" ng-click="delete()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{
+  "name": "crud",
+  "description": "MEAN app",
+  "main": "server.js",
+  "authors": [
+    "thelittletechie"
+  ],
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.2",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2",
+    "toastr": "^2.1.2",
+    "font-awesome": "^4.5.0"
+  }
+}

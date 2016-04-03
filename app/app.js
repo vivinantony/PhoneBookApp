@@ -1,0 +1,1 @@
+angular.module('app', ['ngRoute', 'AppRoute', 'HomeCtrl', 'AddCtrl', 'ListCtrl', 'ViewCtrl', 'EditCtrl']);

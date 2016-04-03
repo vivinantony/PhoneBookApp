@@ -1,0 +1,23 @@
+<div class="well">
+    <h1>{{title}}</h1>
+
+    <input class="form-control" placeholder="Search" ng-model="search">
+
+    <table class="table table-bordered table-hover table-striped table-list">
+        <thead>
+            <tr>
+                <th ng-click="sort('fname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'fname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> First Name</th>
+                <th ng-click="sort('lname')"><span class="glyphicon sort-icon" ng-show="sortKey == 'lname'" ng-class="{'glyphicon-chevron-up': reverse, 'glyphicon-chevron-down': !reverse}"></span> Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contact in contacts | orderBy:sortKey:reverse | filter:search" ng-click="view(contact._id)">
+                <td>{{contact.fname}}</td>
+                <td>{{contact.lname}}</td>
+            </tr>
+            <tr ng-show="contacts.length == 0">
+                <td colspan="2">No contacts added yet!</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

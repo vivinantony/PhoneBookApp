@@ -1,0 +1,20 @@
+<div class="well">
+    <h1>{{title}}</h1>
+
+    <form name="addContactForm">
+        <fieldset>
+            <div class="form-group">
+                <input class="form-control" placeholder="First Name" ng-model="contact.fname" ng-change="noSpace()" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Last Name" ng-model="contact.lname" ng-change="noSpace()">
+            </div>
+            <div class="form-group">
+                <div class="pull-right">
+                    <a class="btn btn-default" href="/list"><i class="fa fa-ban"></i> Cancel</a>
+                    <button class="btn btn-primary" ng-click="save()" ng-disabled="addContactForm.$invalid"><i class="fa fa-floppy-o"></i> Save</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
