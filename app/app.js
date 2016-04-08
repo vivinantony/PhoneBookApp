@@ -1,1 +1,1 @@
-angular.module('app', ['ngRoute', 'AppRoute', 'HomeCtrl', 'AddCtrl', 'ListCtrl', 'ViewCtrl', 'EditCtrl']);
+angular.module('app', ['ngRoute']);

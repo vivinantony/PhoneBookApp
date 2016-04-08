@@ -1,9 +1,11 @@
-angular.module('EditCtrl', []).controller('EditController', function($scope, $http, $location, $routeParams) {
+angular.module('app').controller('EditController', function($scope, $http, $location, $routeParams) {
     $scope.title = "Edit Contact";
 
     var id = $routeParams.id;
     $http.get('/api/' + id).success(function(data) {
         $scope.contact = data;
+    }).error(function(status) {
+        console.log('Error: ' + status);
     });
 
     $scope.cancel = function() {
@@ -15,6 +17,9 @@ angular.module('EditCtrl', []).controller('EditController', function($scope, $ht
             $scope.contact = data;
             $location.path('/list');
             toastr.success('Contact updated successfully!');
+        }).error(function(status) {
+            toastr.warning('Wrongly entered. Please check!');
+            console.log('Error: ' + status);
         });
     };
 
